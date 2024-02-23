@@ -13,12 +13,17 @@ This repository contains the models of MDAPW3 land leasing case study. models an
 - [TODO: link to our paper will be added here](./#)
 ## Project Structrue
 - META-INF: icludes the project defitions and depedencies of the project
-- model: include all of the transformed models and generated codes
+- model: include all of the transformed and generated models
     - land_leasing_choreography.bpmn : this is requiremnt model of case study, which conforms BPMN2.0 meta-model
     - land_leasing_cim.model : computationl independent model of the case study, which is the result of MDAPW3 BPMN to CIM transformation algorithm, and also conforms MDAPW3 CIM meta-model
     - land_leasing_pim.model : platform independent model of the case study, which is the result of MDAPW3 CIM to PIM transformation algorithm, and also conforms MDAPW3 PIM meta-model
     - land_leasing_psm.model : platform specific model of the case study, which is the result of MDAPW3 PIM to PSM transformation algorithm, and also conforms MDAPW3 PSM meta-model
     - codes: as stated in the paper, this directory includes the generated DApp code-base of the case study, which includes codes of smart contracts, client-side, build and configuration files 
+- code: includes all of the generated codes
+    - contracts : includes all of the generted smart contracts for this case study
+    - dapp_ui : includes all of the client-side codes for DApp user interface
+    - adapters : includes all adpaters codes which enable DApp UI to intract with third party systems or enable those systems to be able to intract with smart contracts of this DApp.
+    - configs : includes all build and deployment configurations of land leasing DApp in YMAL and JSON formats
 ## Development Environment Setup
 
 ### Setting Up Eclipse IDE
