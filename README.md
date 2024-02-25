@@ -35,7 +35,7 @@ If you prefer to use regular version of the Eclipse, you could install Epsilon a
 ## Setting Up The Project
 1. Clone the git repository
 ```
-git clone https://github.com/SUTDSLab/MDAPW3.git
+git clone https://github.com/SUTDSLab/MDAPW3-CaseStudy.git
 ``` 
 2. Import the repository as a project in Eclipse
 File > Import > Existing Project into Workspace > Select the root directory > Finish
