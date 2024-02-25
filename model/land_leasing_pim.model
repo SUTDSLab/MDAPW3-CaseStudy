@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://alisamanipour.com/Web3PIM">
+  <OffChainDecentralizedStorage xmi:id="_yaP-gPKcEeu1TK6kRWmaMw" name="DStroage">
+    <dataObjects xmi:id="_yaP-gfKcEeu1TK6kRWmaMw" name="landPics" storeOn="_yaP-gPKcEeu1TK6kRWmaMw" usedBy="_yaQlwPKcEeu1TK6kRWmaMw"/>
+  </OffChainDecentralizedStorage>
+  <ChainStorage xmi:id="_yaP-gvKcEeu1TK6kRWmaMw">
+    <dataObjects xsi:type="ChainToken" xmi:id="_yaP-g_KcEeu1TK6kRWmaMw" name="LandAsset" storeOn="_yaP-gvKcEeu1TK6kRWmaMw" tokenType="NonFungible"/>
+    <dataObjects xsi:type="ChainToken" xmi:id="_yaP-hPKcEeu1TK6kRWmaMw" name="LeasingAsset" storeOn="_yaP-gvKcEeu1TK6kRWmaMw"/>
+    <dataObjects xsi:type="ChainCode" xmi:id="_yaP-hfKcEeu1TK6kRWmaMw" name="ProxyChainCode" application="Proxy" chainCodeAssociations="_yaP-kfKcEeu1TK6kRWmaMw">
+      <chainOperations xmi:id="_yaP-hvKcEeu1TK6kRWmaMw" name="defineTenancyConditions" onChainOperationCalls="_yaP-kvKcEeu1TK6kRWmaMw" guards="_yaQlq_KcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaP-h_KcEeu1TK6kRWmaMw" name="depositBond" onChainOperationCalls="_yaP-k_KcEeu1TK6kRWmaMw" guards="_yaQlufKcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaP-iPKcEeu1TK6kRWmaMw" name="requestForAssesment" onChainOperationCalls="_yaP-lvKcEeu1TK6kRWmaMw" guards="_yaQlq_KcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaP-ifKcEeu1TK6kRWmaMw" name="releaseBond" onChainOperationCalls="_yaP-l_KcEeu1TK6kRWmaMw" guards="_yaQlq_KcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaP-ivKcEeu1TK6kRWmaMw" name="refundBondToTenant" onChainOperationCalls="_yaQlkPKcEeu1TK6kRWmaMw" guards="_yaQlsvKcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaP-i_KcEeu1TK6kRWmaMw" name="fileClaimForBond" onChainOperationCalls="_yaQlk_KcEeu1TK6kRWmaMw" guards="_yaQlq_KcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaP-jPKcEeu1TK6kRWmaMw" name="fileDispute" onChainOperationCalls="_yaQllPKcEeu1TK6kRWmaMw" guards="_yaQlufKcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaP-jfKcEeu1TK6kRWmaMw" name="requestToEvaluateClaim" onChainOperationCalls="_yaQll_KcEeu1TK6kRWmaMw" guards="_yaQlsvKcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaP-jvKcEeu1TK6kRWmaMw" name="transferBondToLandlord" onChainOperationCalls="_yaQlmPKcEeu1TK6kRWmaMw" guards="_yaQlsvKcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaP-j_KcEeu1TK6kRWmaMw" name="payRent" onChainOperationCalls="_yaQlm_KcEeu1TK6kRWmaMw" guards="_yaQlufKcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaP-kPKcEeu1TK6kRWmaMw" name="TransferOwnership" onChainOperationCalls="_yaQlnPKcEeu1TK6kRWmaMw" guards="_yaQlq_KcEeu1TK6kRWmaMw"/>
+    </dataObjects>
+    <dataObjects xsi:type="ChainCode" xmi:id="_yaP-kfKcEeu1TK6kRWmaMw" name="BusinessLogic" application="Logical" chainCodeAssociations="_yaQlpfKcEeu1TK6kRWmaMw _yaQls_KcEeu1TK6kRWmaMw _yaQlrPKcEeu1TK6kRWmaMw _yaQluvKcEeu1TK6kRWmaMw">
+      <chainOperations xmi:id="_yaP-kvKcEeu1TK6kRWmaMw" name="defineTenancyConditions" onChainOperationCalls="_yaQlvPKcEeu1TK6kRWmaMw" guards="_yaQlq_KcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaP-k_KcEeu1TK6kRWmaMw" name="depositBond" guards="_yaQlufKcEeu1TK6kRWmaMw">
+        <operationInput xmi:id="_yaP-lPKcEeu1TK6kRWmaMw">
+          <values xmi:id="_yaP-lfKcEeu1TK6kRWmaMw" name="paymentRecipt"/>
+        </operationInput>
+      </chainOperations>
+      <chainOperations xmi:id="_yaP-lvKcEeu1TK6kRWmaMw" name="requestForAssesment" onChainOperationCalls="_yaQlvfKcEeu1TK6kRWmaMw" guards="_yaQlq_KcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaP-l_KcEeu1TK6kRWmaMw" name="releaseBond" guards="_yaQlq_KcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaQlkPKcEeu1TK6kRWmaMw" name="refundBondToTenant" guards="_yaQlsvKcEeu1TK6kRWmaMw">
+        <operationInput xmi:id="_yaQlkfKcEeu1TK6kRWmaMw">
+          <values xmi:id="_yaQlkvKcEeu1TK6kRWmaMw" name="transferDetails"/>
+        </operationInput>
+      </chainOperations>
+      <chainOperations xmi:id="_yaQlk_KcEeu1TK6kRWmaMw" name="fileClaimForBond" guards="_yaQlq_KcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaQllPKcEeu1TK6kRWmaMw" name="fileDispute" guards="_yaQlufKcEeu1TK6kRWmaMw">
+        <operationInput xmi:id="_yaQllfKcEeu1TK6kRWmaMw">
+          <values xmi:id="_yaQllvKcEeu1TK6kRWmaMw" name="disputeNo"/>
+        </operationInput>
+      </chainOperations>
+      <chainOperations xmi:id="_yaQll_KcEeu1TK6kRWmaMw" name="requestToEvaluateClaim" guards="_yaQlsvKcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaQlmPKcEeu1TK6kRWmaMw" name="transferBondToLandlord" guards="_yaQlsvKcEeu1TK6kRWmaMw">
+        <operationInput xmi:id="_yaQlmfKcEeu1TK6kRWmaMw">
+          <values xmi:id="_yaQlmvKcEeu1TK6kRWmaMw" name="transferDetails"/>
+        </operationInput>
+      </chainOperations>
+      <chainOperations xmi:id="_yaQlm_KcEeu1TK6kRWmaMw" name="payRent" guards="_yaQlufKcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaQlnPKcEeu1TK6kRWmaMw" name="TransferOwnership" guards="_yaQlq_KcEeu1TK6kRWmaMw"/>
+      <chainEvents xmi:id="_yaQlnfKcEeu1TK6kRWmaMw" name="TenancyConditionApproved" storeOn="_yaP-gvKcEeu1TK6kRWmaMw" triggeredBy="_yaP-kvKcEeu1TK6kRWmaMw"/>
+      <chainEvents xmi:id="_yaQlnvKcEeu1TK6kRWmaMw" name="AgrementReject" storeOn="_yaP-gvKcEeu1TK6kRWmaMw" triggeredBy="_yaP-kvKcEeu1TK6kRWmaMw"/>
+      <chainEvents xmi:id="_yaQln_KcEeu1TK6kRWmaMw" name="ConditionsMet" storeOn="_yaP-gvKcEeu1TK6kRWmaMw" triggeredBy="_yaP-lvKcEeu1TK6kRWmaMw"/>
+      <chainEvents xmi:id="_yaQloPKcEeu1TK6kRWmaMw" name="conditionNotMet" storeOn="_yaP-gvKcEeu1TK6kRWmaMw" triggeredBy="_yaP-lvKcEeu1TK6kRWmaMw"/>
+      <chainEvents xmi:id="_yaQlofKcEeu1TK6kRWmaMw" name="ClaimNotAccepted" storeOn="_yaP-gvKcEeu1TK6kRWmaMw" triggeredBy="_yaQll_KcEeu1TK6kRWmaMw"/>
+      <chainEvents xmi:id="_yaQlovKcEeu1TK6kRWmaMw" name="AcceptClaim" storeOn="_yaP-gvKcEeu1TK6kRWmaMw" triggeredBy="_yaQll_KcEeu1TK6kRWmaMw"/>
+      <chainEvents xmi:id="_yaQlo_KcEeu1TK6kRWmaMw" name="LeasePeriodEnd" storeOn="_yaP-gvKcEeu1TK6kRWmaMw" triggeredBy="_yaQlnPKcEeu1TK6kRWmaMw"/>
+      <chainEvents xmi:id="_yaQlpPKcEeu1TK6kRWmaMw" name="RentPeriodEnd" storeOn="_yaP-gvKcEeu1TK6kRWmaMw" triggeredBy="_yaQlnPKcEeu1TK6kRWmaMw"/>
+    </dataObjects>
+    <dataObjects xsi:type="ChainCode" xmi:id="_yaQlpfKcEeu1TK6kRWmaMw" name="Landlord" application="AccessRestriction">
+      <chainVariables xmi:id="_yaQlpvKcEeu1TK6kRWmaMw" name="Landlord"/>
+      <chainOperations xmi:id="_yaQlp_KcEeu1TK6kRWmaMw" name="Landlord"/>
+      <chainOperations xmi:id="_yaQlqPKcEeu1TK6kRWmaMw" name="transferOwnership" guards="_yaQlq_KcEeu1TK6kRWmaMw">
+        <operationInput xmi:id="_yaQlqfKcEeu1TK6kRWmaMw">
+          <values xmi:id="_yaQlqvKcEeu1TK6kRWmaMw" name="newOwner"/>
+        </operationInput>
+      </chainOperations>
+      <modifiers xmi:id="_yaQlq_KcEeu1TK6kRWmaMw" name="onlyLandlord" condition="isLandlord"/>
+    </dataObjects>
+    <dataObjects xsi:type="ChainCode" xmi:id="_yaQlrPKcEeu1TK6kRWmaMw" name="Assessor" application="AccessRestriction">
+      <chainVariables xmi:id="_yaQlrfKcEeu1TK6kRWmaMw" name="Assessor"/>
+      <chainOperations xmi:id="_yaQlrvKcEeu1TK6kRWmaMw" name="Assessor"/>
+      <chainOperations xmi:id="_yaQlr_KcEeu1TK6kRWmaMw" name="transferOwnership" guards="_yaQlsvKcEeu1TK6kRWmaMw">
+        <operationInput xmi:id="_yaQlsPKcEeu1TK6kRWmaMw">
+          <values xmi:id="_yaQlsfKcEeu1TK6kRWmaMw" name="newOwner"/>
+        </operationInput>
+      </chainOperations>
+      <modifiers xmi:id="_yaQlsvKcEeu1TK6kRWmaMw" name="onlyAssessor" condition="isAssessor"/>
+    </dataObjects>
+    <dataObjects xsi:type="ChainCode" xmi:id="_yaQls_KcEeu1TK6kRWmaMw" name="Tenant" application="AccessRestriction">
+      <chainVariables xmi:id="_yaQltPKcEeu1TK6kRWmaMw" name="Tenant"/>
+      <chainOperations xmi:id="_yaQltfKcEeu1TK6kRWmaMw" name="Tenant"/>
+      <chainOperations xmi:id="_yaQltvKcEeu1TK6kRWmaMw" name="transferOwnership" guards="_yaQlufKcEeu1TK6kRWmaMw">
+        <operationInput xmi:id="_yaQlt_KcEeu1TK6kRWmaMw">
+          <values xmi:id="_yaQluPKcEeu1TK6kRWmaMw" name="newOwner"/>
+        </operationInput>
+      </chainOperations>
+      <modifiers xmi:id="_yaQlufKcEeu1TK6kRWmaMw" name="onlyTenant" condition="isTenant"/>
+    </dataObjects>
+    <dataObjects xsi:type="ChainCode" xmi:id="_yaQluvKcEeu1TK6kRWmaMw" name="AgreementsDataStore">
+      <chainVariables xmi:id="_yaQlu_KcEeu1TK6kRWmaMw" name="tenancyAgrement" storeOn="_yaP-gvKcEeu1TK6kRWmaMw"/>
+      <chainOperations xmi:id="_yaQlvPKcEeu1TK6kRWmaMw" name="settenancyAgrement"/>
+      <chainOperations xmi:id="_yaQlvfKcEeu1TK6kRWmaMw" name="gettenancyAgrement"/>
+    </dataObjects>
+  </ChainStorage>
+  <CentralizedStorage xmi:id="_yaQlvvKcEeu1TK6kRWmaMw" name="Landlord">
+    <dataObjects xsi:type="UserInterface" xmi:id="_yaQlv_KcEeu1TK6kRWmaMw" name="Landlord" listenForEvents="_yaQlo_KcEeu1TK6kRWmaMw _yaQln_KcEeu1TK6kRWmaMw _yaQloPKcEeu1TK6kRWmaMw">
+      <userOperations xmi:id="_yaQlwPKcEeu1TK6kRWmaMw" name="defineTenancyConditions" onChainOperationCalls="_yaP-hvKcEeu1TK6kRWmaMw"/>
+      <userOperations xmi:id="_yaQlwfKcEeu1TK6kRWmaMw" name="requestForAssesment" onChainOperationCalls="_yaP-iPKcEeu1TK6kRWmaMw"/>
+      <userOperations xmi:id="_yaQlwvKcEeu1TK6kRWmaMw" name="releaseBond" onChainOperationCalls="_yaP-ifKcEeu1TK6kRWmaMw"/>
+      <userOperations xmi:id="_yaQlw_KcEeu1TK6kRWmaMw" name="fileClaimForBond" onChainOperationCalls="_yaP-i_KcEeu1TK6kRWmaMw"/>
+      <userOperations xmi:id="_yaQlxPKcEeu1TK6kRWmaMw" name="TransferOwnership" onChainOperationCalls="_yaP-kPKcEeu1TK6kRWmaMw"/>
+    </dataObjects>
+  </CentralizedStorage>
+  <CentralizedStorage xmi:id="_yaQlxfKcEeu1TK6kRWmaMw" name="Assessor">
+    <dataObjects xsi:type="UserInterface" xmi:id="_yaQlxvKcEeu1TK6kRWmaMw" name="Assessor" listenForEvents="_yaQlovKcEeu1TK6kRWmaMw">
+      <userOperations xmi:id="_yaQlx_KcEeu1TK6kRWmaMw" name="refundBondToTenant" onChainOperationCalls="_yaP-ivKcEeu1TK6kRWmaMw"/>
+      <userOperations xmi:id="_yaQlyPKcEeu1TK6kRWmaMw" name="requestToEvaluateClaim" onChainOperationCalls="_yaP-jfKcEeu1TK6kRWmaMw"/>
+      <userOperations xmi:id="_yaQlyfKcEeu1TK6kRWmaMw" name="transferBondToLandlord" onChainOperationCalls="_yaP-jvKcEeu1TK6kRWmaMw"/>
+    </dataObjects>
+  </CentralizedStorage>
+  <CentralizedStorage xmi:id="_yaQlyvKcEeu1TK6kRWmaMw" name="Tenant">
+    <dataObjects xsi:type="UserInterface" xmi:id="_yaRMoPKcEeu1TK6kRWmaMw" name="Tenant" listenForEvents="_yaQlnfKcEeu1TK6kRWmaMw _yaQlpPKcEeu1TK6kRWmaMw _yaQlofKcEeu1TK6kRWmaMw">
+      <userOperations xmi:id="_yaRMofKcEeu1TK6kRWmaMw" name="depositBond" onChainOperationCalls="_yaP-h_KcEeu1TK6kRWmaMw"/>
+      <userOperations xmi:id="_yaRMovKcEeu1TK6kRWmaMw" name="fileDispute" onChainOperationCalls="_yaP-jPKcEeu1TK6kRWmaMw"/>
+      <userOperations xmi:id="_yaRMo_KcEeu1TK6kRWmaMw" name="payRent" onChainOperationCalls="_yaP-j_KcEeu1TK6kRWmaMw"/>
+    </dataObjects>
+  </CentralizedStorage>
+</xmi:XMI>
