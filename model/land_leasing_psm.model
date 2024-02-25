@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Web3ETHPSMModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://alisamanipour.com/Web3EthereumPSM" xsi:schemaLocation="http://alisamanipour.com/Web3EthereumPSM ../../Meta%20Models/PSM%20Meta%20Models/Web3EthereumPSM.ecore">
+  <chainPart>
+    <smartContracts name="ProxyChainCode" standard="Proxy" contracAssociations="//@chainPart/@smartContracts.1">
+      <functions name="defineTenancyConditions" appliedModifiers="//@chainPart/@smartContracts.2/@modifiers.0" functionCalls="//@chainPart/@smartContracts.1/@functions.0"/>
+      <functions name="depositBond" appliedModifiers="//@chainPart/@smartContracts.4/@modifiers.0" functionCalls="//@chainPart/@smartContracts.1/@functions.1"/>
+      <functions name="requestForAssesment" appliedModifiers="//@chainPart/@smartContracts.2/@modifiers.0" functionCalls="//@chainPart/@smartContracts.1/@functions.2"/>
+      <functions name="releaseBond" appliedModifiers="//@chainPart/@smartContracts.2/@modifiers.0" functionCalls="//@chainPart/@smartContracts.1/@functions.3"/>
+      <functions name="refundBondToTenant" appliedModifiers="//@chainPart/@smartContracts.3/@modifiers.0" functionCalls="//@chainPart/@smartContracts.1/@functions.4"/>
+      <functions name="fileClaimForBond" appliedModifiers="//@chainPart/@smartContracts.2/@modifiers.0" functionCalls="//@chainPart/@smartContracts.1/@functions.5"/>
+      <functions name="fileDispute" appliedModifiers="//@chainPart/@smartContracts.4/@modifiers.0" functionCalls="//@chainPart/@smartContracts.1/@functions.6"/>
+      <functions name="requestToEvaluateClaim" appliedModifiers="//@chainPart/@smartContracts.3/@modifiers.0" functionCalls="//@chainPart/@smartContracts.1/@functions.7"/>
+      <functions name="transferBondToLandlord" appliedModifiers="//@chainPart/@smartContracts.3/@modifiers.0" functionCalls="//@chainPart/@smartContracts.1/@functions.8"/>
+      <functions name="payRent" appliedModifiers="//@chainPart/@smartContracts.4/@modifiers.0" functionCalls="//@chainPart/@smartContracts.1/@functions.9"/>
+      <functions name="TransferOwnership" appliedModifiers="//@chainPart/@smartContracts.2/@modifiers.0" functionCalls="//@chainPart/@smartContracts.1/@functions.10"/>
+    </smartContracts>
+    <smartContracts name="BusinessLogic" standard="Logical" contracAssociations="//@chainPart/@smartContracts.2 //@chainPart/@smartContracts.4 //@chainPart/@smartContracts.3 //@chainPart/@smartContracts.5">
+      <functions name="defineTenancyConditions" appliedModifiers="//@chainPart/@smartContracts.2/@modifiers.0" functionCalls="//@chainPart/@smartContracts.5/@functions.0"/>
+      <functions name="depositBond" appliedModifiers="//@chainPart/@smartContracts.4/@modifiers.0">
+        <functionInput>
+          <values type="address" name="paymentRecipt"/>
+        </functionInput>
+      </functions>
+      <functions name="requestForAssesment" appliedModifiers="//@chainPart/@smartContracts.2/@modifiers.0" functionCalls="//@chainPart/@smartContracts.5/@functions.1"/>
+      <functions name="releaseBond" appliedModifiers="//@chainPart/@smartContracts.2/@modifiers.0"/>
+      <functions name="refundBondToTenant" appliedModifiers="//@chainPart/@smartContracts.3/@modifiers.0">
+        <functionInput>
+          <values type="address" name="transferDetails"/>
+        </functionInput>
+      </functions>
+      <functions name="fileClaimForBond" appliedModifiers="//@chainPart/@smartContracts.2/@modifiers.0"/>
+      <functions name="fileDispute" appliedModifiers="//@chainPart/@smartContracts.4/@modifiers.0">
+        <functionInput>
+          <values type="address" name="disputeNo"/>
+        </functionInput>
+      </functions>
+      <functions name="requestToEvaluateClaim" appliedModifiers="//@chainPart/@smartContracts.3/@modifiers.0"/>
+      <functions name="transferBondToLandlord" appliedModifiers="//@chainPart/@smartContracts.3/@modifiers.0">
+        <functionInput>
+          <values type="address" name="transferDetails"/>
+        </functionInput>
+      </functions>
+      <functions name="payRent" appliedModifiers="//@chainPart/@smartContracts.4/@modifiers.0"/>
+      <functions name="TransferOwnership" appliedModifiers="//@chainPart/@smartContracts.2/@modifiers.0"/>
+      <events name="TenancyConditionApproved"/>
+      <events name="AgrementReject"/>
+      <events name="ConditionsMet"/>
+      <events name="conditionNotMet"/>
+      <events name="ClaimNotAccepted"/>
+      <events name="AcceptClaim"/>
+      <events name="LeasePeriodEnd"/>
+      <events name="RentPeriodEnd"/>
+    </smartContracts>
+    <smartContracts name="Landlord" standard="Ownable">
+      <stateVariables name="Landlord"/>
+      <functions name="Landlord"/>
+      <functions name="transferOwnership" appliedModifiers="//@chainPart/@smartContracts.2/@modifiers.0">
+        <functionInput>
+          <values type="address" name="newOwner"/>
+        </functionInput>
+      </functions>
+      <modifiers name="onlyLandlord" condition="isLandlord">
+        <modifierInput/>
+      </modifiers>
+    </smartContracts>
+    <smartContracts name="Assessor" standard="Ownable">
+      <stateVariables name="Assessor"/>
+      <functions name="Assessor"/>
+      <functions name="transferOwnership" appliedModifiers="//@chainPart/@smartContracts.3/@modifiers.0">
+        <functionInput>
+          <values type="address" name="newOwner"/>
+        </functionInput>
+      </functions>
+      <modifiers name="onlyAssessor" condition="isAssessor">
+        <modifierInput/>
+      </modifiers>
+    </smartContracts>
+    <smartContracts name="Tenant" standard="Ownable">
+      <stateVariables name="Tenant"/>
+      <functions name="Tenant"/>
+      <functions name="transferOwnership" appliedModifiers="//@chainPart/@smartContracts.4/@modifiers.0">
+        <functionInput>
+          <values type="address" name="newOwner"/>
+        </functionInput>
+      </functions>
+      <modifiers name="onlyTenant" condition="isTenant">
+        <modifierInput/>
+      </modifiers>
+    </smartContracts>
+    <smartContracts name="AgreementsDataStore" standard="Storage">
+      <stateVariables name="tenancyAgrement"/>
+      <functions name="settenancyAgrement"/>
+      <functions name="gettenancyAgrement"/>
+    </smartContracts>
+    <smartContracts name="LandAsset" standard="ERC721"/>
+    <smartContracts name="LeasingAsset"/>
+  </chainPart>
+  <offChainPart>
+    <offchainStorages xsi:type="IPFSStorage" name="DStroage">
+      <dataObjects name="landPics"/>
+    </offchainStorages>
+    <offchainStorages xsi:type="CloudStorage" name="Landlord">
+      <dataObjects xsi:type="WebUI" name="Landlord" rootElementRef="/">
+        <userOperations name="defineTenancyConditions" onChainCalls="//@chainPart/@smartContracts.0/@functions.0"/>
+        <userOperations name="requestForAssesment" onChainCalls="//@chainPart/@smartContracts.0/@functions.2"/>
+        <userOperations name="releaseBond" onChainCalls="//@chainPart/@smartContracts.0/@functions.3"/>
+        <userOperations name="fileClaimForBond" onChainCalls="//@chainPart/@smartContracts.0/@functions.5"/>
+        <userOperations name="TransferOwnership" onChainCalls="//@chainPart/@smartContracts.0/@functions.10"/>
+      </dataObjects>
+    </offchainStorages>
+    <offchainStorages xsi:type="CloudStorage" name="Assessor">
+      <dataObjects xsi:type="WebUI" name="Assessor" rootElementRef="/">
+        <userOperations name="refundBondToTenant" onChainCalls="//@chainPart/@smartContracts.0/@functions.4"/>
+        <userOperations name="requestToEvaluateClaim" onChainCalls="//@chainPart/@smartContracts.0/@functions.7"/>
+        <userOperations name="transferBondToLandlord" onChainCalls="//@chainPart/@smartContracts.0/@functions.8"/>
+      </dataObjects>
+    </offchainStorages>
+    <offchainStorages xsi:type="CloudStorage" name="Tenant">
+      <dataObjects xsi:type="WebUI" name="Tenant" rootElementRef="/">
+        <userOperations name="depositBond" onChainCalls="//@chainPart/@smartContracts.0/@functions.1"/>
+        <userOperations name="fileDispute" onChainCalls="//@chainPart/@smartContracts.0/@functions.6"/>
+        <userOperations name="payRent" onChainCalls="//@chainPart/@smartContracts.0/@functions.9"/>
+      </dataObjects>
+    </offchainStorages>
+  </offChainPart>
+</Web3ETHPSMModel>
