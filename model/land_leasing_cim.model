@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://alisamanipour.com/Web3CIM">
+  <Agent xmi:id="_9z4GAPKYEeu1TK6kRWmaMw" name="Landlord" callToOperations="_9z4GA_KYEeu1TK6kRWmaMw _9z6iQ_KYEeu1TK6kRWmaMw _9z7JUPKYEeu1TK6kRWmaMw _9z7JUvKYEeu1TK6kRWmaMw _9z7JWfKYEeu1TK6kRWmaMw" listenFor="_9z7JWvKYEeu1TK6kRWmaMw _9z6iRPKYEeu1TK6kRWmaMw _9z6iRfKYEeu1TK6kRWmaMw"/>
+  <Agent xmi:id="_9z4GAfKYEeu1TK6kRWmaMw" name="Assessor" callToOperations="_9z7JUfKYEeu1TK6kRWmaMw _9z7JVPKYEeu1TK6kRWmaMw _9z7JV_KYEeu1TK6kRWmaMw" listenFor="_9z7JVvKYEeu1TK6kRWmaMw"/>
+  <Agent xmi:id="_9z4GAvKYEeu1TK6kRWmaMw" name="Tenant" callToOperations="_9z6iQvKYEeu1TK6kRWmaMw _9z7JU_KYEeu1TK6kRWmaMw _9z7JWPKYEeu1TK6kRWmaMw" listenFor="_9z6iQPKYEeu1TK6kRWmaMw _9z7JW_KYEeu1TK6kRWmaMw _9z7JVfKYEeu1TK6kRWmaMw"/>
+  <Operation xmi:id="_9z4GA_KYEeu1TK6kRWmaMw" name="defineTenancyConditions" guards="_9z7wa_KYEeu1TK6kRWmaMw" requireImutibility="true" requireHighPerformance="false" requireTransparancy="true">
+    <generatedEvents xmi:id="_9z6iQPKYEeu1TK6kRWmaMw" name="TenancyConditionApproved" triggeredBy="_9z4GA_KYEeu1TK6kRWmaMw"/>
+    <generatedEvents xmi:id="_9z6iQfKYEeu1TK6kRWmaMw" name="AgrementReject" triggeredBy="_9z4GA_KYEeu1TK6kRWmaMw"/>
+  </Operation>
+  <Operation xmi:id="_9z6iQvKYEeu1TK6kRWmaMw" name="depositBond" operateOnAsset="_9z7wZvKYEeu1TK6kRWmaMw" guards="_9z8XcfKYEeu1TK6kRWmaMw" requireImutibility="true" requireHighPerformance="false" requireTransparancy="true"/>
+  <Operation xmi:id="_9z6iQ_KYEeu1TK6kRWmaMw" name="requestForAssesment" guards="_9z7wa_KYEeu1TK6kRWmaMw" requireImutibility="true" requireHighPerformance="false" requireTransparancy="true">
+    <generatedEvents xmi:id="_9z6iRPKYEeu1TK6kRWmaMw" name="ConditionsMet" triggeredBy="_9z6iQ_KYEeu1TK6kRWmaMw"/>
+    <generatedEvents xmi:id="_9z6iRfKYEeu1TK6kRWmaMw" name="conditionNotMet" triggeredBy="_9z6iQ_KYEeu1TK6kRWmaMw"/>
+  </Operation>
+  <Operation xmi:id="_9z7JUPKYEeu1TK6kRWmaMw" name="releaseBond" guards="_9z7wa_KYEeu1TK6kRWmaMw" requireImutibility="true" requireHighPerformance="false" requireTransparancy="true"/>
+  <Operation xmi:id="_9z7JUfKYEeu1TK6kRWmaMw" name="refundBondToTenant" guards="_9z8XcPKYEeu1TK6kRWmaMw" requireImutibility="true" requireHighPerformance="false" requireTransparancy="true"/>
+  <Operation xmi:id="_9z7JUvKYEeu1TK6kRWmaMw" name="fileClaimForBond" guards="_9z7wa_KYEeu1TK6kRWmaMw" requireImutibility="true" requireHighPerformance="false" requireTransparancy="true"/>
+  <Operation xmi:id="_9z7JU_KYEeu1TK6kRWmaMw" name="fileDispute" guards="_9z8XcfKYEeu1TK6kRWmaMw" requireImutibility="true" requireHighPerformance="false" requireTransparancy="true"/>
+  <Operation xmi:id="_9z7JVPKYEeu1TK6kRWmaMw" name="requestToEvaluateClaim" guards="_9z8XcPKYEeu1TK6kRWmaMw" requireImutibility="true" requireHighPerformance="false" requireTransparancy="true">
+    <generatedEvents xmi:id="_9z7JVfKYEeu1TK6kRWmaMw" name="ClaimNotAccepted" triggeredBy="_9z7JVPKYEeu1TK6kRWmaMw"/>
+    <generatedEvents xmi:id="_9z7JVvKYEeu1TK6kRWmaMw" name="AcceptClaim" triggeredBy="_9z7JVPKYEeu1TK6kRWmaMw"/>
+  </Operation>
+  <Operation xmi:id="_9z7JV_KYEeu1TK6kRWmaMw" name="transferBondToLandlord" guards="_9z8XcPKYEeu1TK6kRWmaMw" requireImutibility="true" requireHighPerformance="false" requireTransparancy="true"/>
+  <Operation xmi:id="_9z7JWPKYEeu1TK6kRWmaMw" name="payRent" guards="_9z8XcfKYEeu1TK6kRWmaMw" requireImutibility="true" requireHighPerformance="false" requireTransparancy="true"/>
+  <Operation xmi:id="_9z7JWfKYEeu1TK6kRWmaMw" name="TransferOwnership" operateOnAsset="_9z7wZPKYEeu1TK6kRWmaMw" guards="_9z7wa_KYEeu1TK6kRWmaMw" requireImutibility="true" requireHighPerformance="false" requireTransparancy="true">
+    <generatedEvents xmi:id="_9z7JWvKYEeu1TK6kRWmaMw" name="LeasePeriodEnd" triggeredBy="_9z7JWfKYEeu1TK6kRWmaMw"/>
+    <generatedEvents xmi:id="_9z7JW_KYEeu1TK6kRWmaMw" name="RentPeriodEnd" triggeredBy="_9z7JWfKYEeu1TK6kRWmaMw"/>
+  </Operation>
+  <Message xmi:id="_9z7JXPKYEeu1TK6kRWmaMw" name="paymentRecipt" sender="_9z4GAvKYEeu1TK6kRWmaMw" receiver="_9z4GAfKYEeu1TK6kRWmaMw" associationOperation="_9z6iQvKYEeu1TK6kRWmaMw"/>
+  <Message xmi:id="_9z7wYPKYEeu1TK6kRWmaMw" name="transferDetails" sender="_9z4GAfKYEeu1TK6kRWmaMw" receiver="_9z4GAvKYEeu1TK6kRWmaMw" associationOperation="_9z7JUfKYEeu1TK6kRWmaMw"/>
+  <Message xmi:id="_9z7wYfKYEeu1TK6kRWmaMw" name="transferDetails" sender="_9z4GAfKYEeu1TK6kRWmaMw" receiver="_9z4GAPKYEeu1TK6kRWmaMw" associationOperation="_9z7JV_KYEeu1TK6kRWmaMw"/>
+  <Message xmi:id="_9z7wYvKYEeu1TK6kRWmaMw" name="disputeNo" sender="_9z4GAfKYEeu1TK6kRWmaMw" receiver="_9z4GAvKYEeu1TK6kRWmaMw" associationOperation="_9z7JU_KYEeu1TK6kRWmaMw"/>
+  <AssetManager xmi:id="_9z7wY_KYEeu1TK6kRWmaMw" name="LandAssetRegistry">
+    <providedAssets xmi:id="_9z7wZPKYEeu1TK6kRWmaMw" name="LandAsset" assetType="NonFungible"/>
+  </AssetManager>
+  <AssetManager xmi:id="_9z7wZfKYEeu1TK6kRWmaMw" name="LeasingAssetRegistry">
+    <providedAssets xmi:id="_9z7wZvKYEeu1TK6kRWmaMw" name="LeasingAsset"/>
+  </AssetManager>
+  <DataStorage xmi:id="_9z7wZ_KYEeu1TK6kRWmaMw" name="landPicturesCollection">
+    <dataObjects xmi:id="_9z7waPKYEeu1TK6kRWmaMw" name="landPics" providBy="_9z7wZ_KYEeu1TK6kRWmaMw" usedBy="_9z4GA_KYEeu1TK6kRWmaMw" storeOn="_9z7wZ_KYEeu1TK6kRWmaMw" requireImutibility="false" requireTransparancy="true" canShareAmoungAllAgents="true" canEncryptAndShare="true" isBigData="true"/>
+  </DataStorage>
+  <DataStorage xmi:id="_9z7wafKYEeu1TK6kRWmaMw" name="AgreementsDataStore">
+    <dataObjects xmi:id="_9z7wavKYEeu1TK6kRWmaMw" name="tenancyAgrement" providBy="_9z4GA_KYEeu1TK6kRWmaMw" usedBy="_9z6iQ_KYEeu1TK6kRWmaMw" storeOn="_9z7wafKYEeu1TK6kRWmaMw" requireImutibility="true" requireTransparancy="true" canShareAmoungAllAgents="true" canEncryptAndShare="true" isBigData="false"/>
+  </DataStorage>
+  <AuthorizationGuard xmi:id="_9z7wa_KYEeu1TK6kRWmaMw" name="onlyLandlord" guardCondition="isLandlord" authorizedAgent="_9z4GAPKYEeu1TK6kRWmaMw"/>
+  <AuthorizationGuard xmi:id="_9z8XcPKYEeu1TK6kRWmaMw" name="onlyAssessor" guardCondition="isAssessor" authorizedAgent="_9z4GAfKYEeu1TK6kRWmaMw"/>
+  <AuthorizationGuard xmi:id="_9z8XcfKYEeu1TK6kRWmaMw" name="onlyTenant" guardCondition="isTenant" authorizedAgent="_9z4GAvKYEeu1TK6kRWmaMw"/>
+</xmi:XMI>
